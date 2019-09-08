@@ -1,0 +1,19 @@
+{
+  "name": "ts-lib-webpack-starter",
+  "version": "0.0.0",
+  "description": "typescript-based javascript library starter package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Euiyeon/ts-lib-webpack-starter.git"
+  },
+  "author": "Euiyeon <ppang327@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Euiyeon/ts-lib-webpack-starter/issues"
+  },
+  "homepage": "https://github.com/Euiyeon/ts-lib-webpack-starter#readme"
+}
