@@ -11,11 +11,11 @@ based on <https://github.com/nobrainr/typescript-webpack-starter>
 
 ## features
 
-* [ ] typescript3
-* [ ] tslint
-* [ ] standard js
-* [ ] ava + nyc
-* [ ] webpack4
+* [ ] [TypeScript 3.0](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html)
+* [ ] [TSLint](https://palantir.github.io/tslint/)
+* [ ] [standard JS](https://standardjs.com/)
+* [ ] [AVA](https://github.com/avajs/ava), [nyc](https://github.com/istanbuljs/nyc)
+* [ ] [Webpack 4](https://webpack.js.org/)
 
 ### continuous integration
 
