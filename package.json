@@ -13,8 +13,8 @@
     "fix:tslint": "tslint --fix --project .",
     "test": "run-s build test:*",
     "test:lint": "tslint --project . && prettier \"src/**/*.ts\" --list-different",
-    "test:unit": "nyc ava --verbose",
-    "precov": "run-s --silent build test:unit",
+    "test:unit": "nyc --silent ava --verbose",
+    "precov": "run-s build test:unit",
     "cov": "run-s cov:html && open-cli coverage/index.html",
     "cov:html": "nyc report --reporter=html",
     "cov:send": "nyc report --reporter=lcov && codecov",
@@ -32,8 +32,8 @@
     "serve:dev": "webpack-dev-server --mode development --config ./webpack.dev.js --hot --inline --progress --watch --open",
     "serve:prod": "cross-env NODE_ENV=production webpack-dev-server --config ./webpack.prod.js --port 3040 --host 0.0.0.0 --hot --inline --progress --watch --open --content-base dist/",
     "start": "run-s serve:dev",
+    "prepare-release": "run-s reset test cov:check",
     "release": "standard-version",
-    "prepare-release": "run-s reset test cov:check doc:html version doc:publish",
     "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('ts-domlib-starter must be installed with Yarn: https://yarnpkg.com/')\""
   },
   "scripts-info": {
@@ -45,7 +45,7 @@
     "cov": "Rebuild, run tests, then create and open the coverage report",
     "doc": "Generate HTML API documentation and open it in a browser",
     "doc:json": "Generate API documentation in typedoc JSON format",
-    "version": "Bump package.json version, update CHANGELOG.md, tag release",
+    "release": "Bump package.json version, update CHANGELOG.md, tag release",
     "reset": "Delete all untracked files and reset the repo to the last commit",
     "prepare-release": "One-step: clean, build, test, publish docs, and prep a release"
   },
