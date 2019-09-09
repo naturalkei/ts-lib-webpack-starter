@@ -820,6 +820,11 @@ async@^2.5.0:
   dependencies:
     lodash "^4.17.14"
 
+async@~0.2.10:
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/async/-/async-0.2.10.tgz#b6bbe0b0674b9d719708ca38de8c237cb526c3d1"
+  integrity sha1-trvgsGdLnXGXCMo43owjfLUmw9E=
+
 atob@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
@@ -1021,6 +1026,13 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
+
+bannerjs@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/bannerjs/-/bannerjs-1.0.6.tgz#cb8421528a77528aaa049cfdba6ee4136db58ff5"
+  integrity sha512-01YG4rrTQZevfx3kNNU3yNHw4tBt65YZIluWsDOoCTKkcqzhv415u823s+MCqJ4k0aI3BeBLdnH2nNnITEiMcQ==
+  dependencies:
+    object-assign "^4.1.0"
 
 base64-js@^1.0.2:
   version "1.3.1"
@@ -2350,14 +2362,6 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-ejs-loader@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/ejs-loader/-/ejs-loader-0.3.3.tgz#021aa196b8858f05b6f095576c4afe61012ccc2e"
-  integrity sha512-1pQNFYu+4VIeLLNrSZ8QaiyFk9oXv8koUyQ2Pz5k0dw89HHjeiliTPQ46GfqAzCqJ8cEq8QFNj/HsVjyIuzKEA==
-  dependencies:
-    loader-utils "^0.2.7"
-    lodash "^4.17.11"
-
 elliptic@^6.0.0:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.1.tgz#c380f5f909bf1b9b4428d028cd18d3b0efd6b52b"
@@ -2955,7 +2959,7 @@ fast-levenshtein@~2.0.4:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
-fastparse@^1.1.1:
+fastparse@^1.0.0, fastparse@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.2.tgz#91728c5a5942eced8531283c79441ee4122c35a9"
   integrity sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ==
@@ -3416,6 +3420,16 @@ handle-thing@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-2.0.0.tgz#0e039695ff50c93fc288557d696f3c1dc6776754"
   integrity sha512-d4sze1JNC454Wdo2fkuyzCr6aHcbL6PGGuFAz0Li/NcOm1tCHGnWDRmJP85dh9IhQErTc2svWFEX5xHIOo//kQ==
+
+handlebars-loader@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/handlebars-loader/-/handlebars-loader-1.7.1.tgz#07088f09d8a559344908f7c88c68c0ffdacc555d"
+  integrity sha512-Q+Z/hDPQzU8ZTlVnAe/0T1LHABlyhL7opNcSKcQDhmUXK2ByGTqib1Z2Tfv4Ic50WqDcLFWQcOb3mhjcBRbscQ==
+  dependencies:
+    async "~0.2.10"
+    fastparse "^1.0.0"
+    loader-utils "1.0.x"
+    object-assign "^4.1.0"
 
 handlebars@^4.1.2:
   version "4.2.0"
@@ -4512,6 +4526,15 @@ loader-runner@^2.4.0:
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.4.0.tgz#ed47066bfe534d7e84c4c7b9998c2a75607d9357"
   integrity sha512-Jsmr89RcXGIwivFY21FcRrisYZfvLMTWx5kOLc+JTxtpBOG6xML0vzbc6SEQG2FO9/4Fc3wW4LVcB5DmGflaRw==
 
+loader-utils@1.0.x:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.0.4.tgz#13f56197f1523a305891248b4c7244540848426c"
+  integrity sha1-E/Vhl/FSOjBYkSSLTHJEVAhIQmw=
+  dependencies:
+    big.js "^3.1.3"
+    emojis-list "^2.0.0"
+    json5 "^0.5.0"
+
 loader-utils@1.2.3, loader-utils@^1.0.2, loader-utils@^1.1.0, loader-utils@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.2.3.tgz#1ff5dc6911c9f0a062531a4c04b609406108c2c7"
@@ -4521,7 +4544,7 @@ loader-utils@1.2.3, loader-utils@^1.0.2, loader-utils@^1.1.0, loader-utils@^1.2.
     emojis-list "^2.0.0"
     json5 "^1.0.1"
 
-loader-utils@^0.2.16, loader-utils@^0.2.7:
+loader-utils@^0.2.16:
   version "0.2.17"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.17.tgz#f86e6374d43205a6e6c60e9196f17c0299bfb348"
   integrity sha1-+G5jdNQyBabmxg6RlvF8Apm/s0g=
@@ -7987,6 +8010,13 @@ webpack-log@^2.0.0:
   dependencies:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
+
+webpack-merge@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.2.2.tgz#a27c52ea783d1398afd2087f547d7b9d2f43634d"
+  integrity sha512-TUE1UGoTX2Cd42j3krGYqObZbOD+xF7u28WB7tfUordytSjbWTIjK/8V0amkBfTYN4/pB/GIDlJZZ657BGG19g==
+  dependencies:
+    lodash "^4.17.15"
 
 webpack-sources@^1.4.0, webpack-sources@^1.4.1:
   version "1.4.3"
