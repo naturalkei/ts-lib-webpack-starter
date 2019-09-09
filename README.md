@@ -1,6 +1,7 @@
 # ts-lib-webpack-starter
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 typescript-based javascript library starter package
@@ -16,7 +17,7 @@ based on <https://github.com/nobrainr/typescript-webpack-starter>
 * [x] [standard JS](https://standardjs.com/)
 * [x] [AVA](https://github.com/avajs/ava), [nyc](https://github.com/istanbuljs/nyc)
 * [x] [Webpack 4](https://webpack.js.org/)
-* [ ] [Standard Version](https://github.com/conventional-changelog/standard-version)
+* [x] [Standard Version](https://github.com/conventional-changelog/standard-version)
 
 ### continuous integration
 
