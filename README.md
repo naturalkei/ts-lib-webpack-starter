@@ -4,7 +4,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-typescript-based javascript library starter package
+A typescript starter for building javascript libraries
 
 based on <https://github.com/nobrainr/typescript-webpack-starter>
 

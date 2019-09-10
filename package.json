@@ -1,7 +1,7 @@
 {
   "name": "ts-lib-webpack-starter",
   "version": "0.0.0",
-  "description": "typescript-based javascript library starter package",
+  "description": "A typescript starter for building javascript libraries",
   "main": "src/index.ts",
   "typings": "dist/index.d.ts",
   "scripts": {
