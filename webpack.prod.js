@@ -3,8 +3,10 @@ const merge = require('webpack-merge')
 const common = require('./webpack.common')
 const pkg = require('./package.json')
 const { multibanner } = require('bannerjs')
-const { pick } = require('lodash')
+const { remove, pick } = require('lodash')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const { library: LIBRARY_NAME } = common.output
 const banner = multibanner(pick(pkg, [
   'author',
   'name',
@@ -13,8 +15,7 @@ const banner = multibanner(pick(pkg, [
   'description',
   'homepage'
 ]))
-
-module.exports = merge(common, {
+const prodConfig = {
   mode: 'production',
   devtool: 'source-map',
   plugins: [
@@ -23,17 +24,21 @@ module.exports = merge(common, {
       raw: true,
       banner
     })
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.(js|ts)$/,
-        loader: 'istanbul-instrumenter-loader',
-        exclude: [/\/node_modules\//],
-        query: {
-          esModules: true
-        }
-      }
-    ]
+  ]
+}
+
+function generateConfig (name) {
+  const config = merge(common, prodConfig)
+  const { output, optimization, plugins } = config
+  const uglify = name.indexOf('min') > -1
+  optimization.minimize = uglify
+  if (uglify) {
+    output.filename = `${LIBRARY_NAME}.min.js`
+    remove(plugins, p => p instanceof HtmlWebpackPlugin)
   }
+  return config
+}
+
+module.exports = [LIBRARY_NAME, `${LIBRARY_NAME}.min`].map(key => {
+  return generateConfig(key)
 })

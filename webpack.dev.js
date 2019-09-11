@@ -5,10 +5,22 @@ const { join } = require('path')
 
 module.exports = merge(common, {
   mode: 'development',
+  module: {
+    rules: [
+      {
+        test: /\.(js|ts)$/,
+        loader: 'istanbul-instrumenter-loader',
+        exclude: [/\/node_modules\//],
+        query: {
+          esModules: true
+        }
+      }
+    ]
+  },
   devtool: 'hidden-source-map',
   // https://webpack.js.org/configuration/dev-server/
   devServer: {
-    contentBase: join(__dirname, 'dist/'),
+    contentBase: join(__dirname, 'dist/umd'),
     // watchContentBase: true,
     // compress: true,
     port: 3033,
