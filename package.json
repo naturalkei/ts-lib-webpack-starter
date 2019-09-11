@@ -1,6 +1,6 @@
 {
   "name": "ts-lib-webpack-starter",
-  "libraryName": "customlib",
+  "libraryName": "custom-lib",
   "version": "0.0.0",
   "description": "A typescript starter for building javascript libraries",
   "main": "index.js",

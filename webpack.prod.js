@@ -6,7 +6,10 @@ const { multibanner } = require('bannerjs')
 const { remove, pick } = require('lodash')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const { library: LIBRARY_NAME } = common.output
+const {
+  filename: OUTPUT_FILE,
+  library: GLOBAL_NAME
+} = common.output
 const banner = multibanner(pick(pkg, [
   'author',
   'name',
@@ -33,12 +36,12 @@ function generateConfig (name) {
   const uglify = name.indexOf('min') > -1
   optimization.minimize = uglify
   if (uglify) {
-    output.filename = `${LIBRARY_NAME}.min.js`
+    output.filename = OUTPUT_FILE.replace('.js', '.min.js')
     remove(plugins, p => p instanceof HtmlWebpackPlugin)
   }
   return config
 }
 
-module.exports = [LIBRARY_NAME, `${LIBRARY_NAME}.min`].map(key => {
+module.exports = [GLOBAL_NAME, `${GLOBAL_NAME}.min`].map(key => {
   return generateConfig(key)
 })
